@@ -47,6 +47,28 @@ return {
           "build",
         },
       },
+      extensions = {
+        projects = {
+          attach_mappings = function(prompt_bufnr, map)
+            local actions = require("telescope.actions")
+            local state = require("telescope.actions.state")
+            local project = require("project_nvim.project")
+
+            actions.select_default:replace(function()
+              local selected_entry = state.get_selected_entry()
+              if selected_entry == nil then
+                actions.close(prompt_bufnr)
+                return
+              end
+              local project_path = selected_entry.value
+              actions.close(prompt_bufnr)
+              project.set_pwd(project_path, "telescope")
+              vim.cmd("Dashboard")
+            end)
+            return true
+          end,
+        },
+      },
     },
   },
   {
