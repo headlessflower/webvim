@@ -5,6 +5,7 @@ map("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit" })
 map("n", "<leader>Q", "<cmd>qa!<cr>", { desc = "Quit all" })
 
 map("n", "<leader>e", "<cmd>Neotree reveal left toggle<cr>", { desc = "Explorer" })
+map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find files" })
 map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Live grep" })

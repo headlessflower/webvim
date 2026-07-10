@@ -48,6 +48,7 @@ corepack prepare pnpm@latest --activate
 
 ```text
 <leader>e   Explorer
+-           Oil (Open parent directory)
 <leader>ff  Find files
 <leader>fg  Live grep
 <leader>gg  LazyGit

@@ -1,6 +1,10 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
+-- Disable netrw for oil.nvim
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 local opt = vim.opt
 opt.number = true
 opt.relativenumber = true
